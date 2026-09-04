@@ -24,10 +24,7 @@ Ensure you have installed:
 Run the pipeline by pointing it to your raw FASTA and GenBank metadata files.
 
 ```bash
-nextflow run /path/to/phylodrop/main.nf \
-    --input_fasta sequence.fasta \
-    --input_gb sequence.gb \
-    -profile docker
+nextflow run josecarrillo2309/phylodrop -profile docker
 ```
 
 By default, Phylodrop uses **Maximum Likelihood (IQ-TREE2)**. To use **Bayesian Inference (MrBayes)**, pass the parameter:
