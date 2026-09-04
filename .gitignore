@@ -1,0 +1,21 @@
+# Archivos temporales y de caché de Nextflow
+work/
+.nextflow/
+.nextflow.log*
+.nextflow.pid*
+.nextflow.pid
+
+# Archivos de salida (Para que GitHub no se sature de datos pesados)
+results/
+
+# Reportes por defecto de Nextflow
+trace.txt
+timeline.html
+report.html
+dag.dot
+dag.svg
+dag.pdf
+
+# Archivos temporales de sistema
+*.swp
+.DS_Store
