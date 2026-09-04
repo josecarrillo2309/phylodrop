@@ -39,7 +39,7 @@ All outputs are neatly categorized inside a `results/` folder (which is ignored 
 - `results/00_metadata/`: Formatted `metadata.tsv`.
 - `results/01_format/`: FASTA files and `id_map.tsv`.
 - `results/04_trees/`: Raw phylogenetic trees (`.treefile` or `.con.tre`).
-- `results/05_annotated_trees/`: Drag-and-drop `itol_dataset.txt` files for instant mapping in iTOL.
+- `results/05_annotated_trees/`: A comprehensive suite of drag-and-drop `itol_*.txt` files for instant mapping in iTOL (including popup info, simple bar charts, color strips, and text annotations).
 
 ## 📄 License
 
