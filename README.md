@@ -25,8 +25,8 @@ Run the pipeline by pointing it to your raw FASTA and GenBank metadata files.
 
 ```bash
 nextflow run /path/to/phylodrop/main.nf \
-    --input_fasta my_sequences.fasta \
-    --input_gb my_metadata.gb \
+    --input_fasta sequence.fasta \
+    --input_gb sequence.gb \
     -profile docker
 ```
 
