@@ -10,7 +10,7 @@ process VISUALIZE {
     output:
     path "annotated_${tree.baseName}.pdf", emit: pdf
     path "annotated_${tree.baseName}.nwk", emit: nwk
-    path "itol_dataset.txt", emit: itol
+    path "itol_metadata.txt", emit: itol
 
     script:
     """
@@ -28,20 +28,24 @@ with open('${id_map}', 'r') as f_map:
         if len(parts) == 2:
             id_dict[parts[0]] = parts[1]
 
-with open('${metadata}', 'r') as f_meta, open('itol_dataset.txt', 'w') as f_itol:
-    f_itol.write('DATASET_TEXT\\n')
+with open('${metadata}', 'r') as f_meta, open('itol_metadata.txt', 'w') as f_itol:
     f_itol.write('SEPARATOR TAB\\n')
-    f_itol.write('DATASET_LABEL\\tSpecies_Annotation\\n')
-    f_itol.write('COLOR\\t#3498db\\n')
+    f_itol.write('FIELD_LABELS\\tspecies\\torigin\\tdate\\tlength_bp\\tmolecule_type\\tcompleteness\\n')
     f_itol.write('DATA\\n')
     
     reader = csv.DictReader(f_meta, delimiter='\\t')
     for row in reader:
         orig_id = row['sample_id']
         species = row.get('species', 'unknown')
+        origin = row.get('origin', 'unknown')
+        date = row.get('date', 'unknown')
+        length = row.get('length_bp', 'unknown')
+        mol = row.get('molecule_type', 'unknown')
+        comp = row.get('completeness', 'unknown')
+        
         if orig_id in id_dict:
             short_id = id_dict[orig_id]
-            f_itol.write(f'{short_id}\\t{species}\\n')
+            f_itol.write(f'{short_id}\\t{species}\\t{origin}\\t{date}\\t{length}\\t{mol}\\t{comp}\\n')
 "
     """
 }
