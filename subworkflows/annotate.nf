@@ -11,5 +11,5 @@ workflow ANNOTATE {
 
     emit:
     annotated_trees = VISUALIZE.out.pdf
-    itol_files = VISUALIZE.out.itol
+    itol_files = VISUALIZE.out.itol_files
 }
