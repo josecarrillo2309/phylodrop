@@ -45,8 +45,8 @@ with open('${metadata}', 'r') as f_meta, open('itol_metadata.txt', 'w') as f_ito
         
         if orig_id in id_dict:
             short_id = id_dict[orig_id]
-            title = f"Metadata: {short_id}"
-            html = f"<ul><li><b>Especie:</b> {species}</li><li><b>Origen:</b> {origin}</li><li><b>Fecha:</b> {date}</li><li><b>Tamaño:</b> {length} bp</li><li><b>Molécula:</b> {mol}</li><li><b>Estatus:</b> {comp}</li></ul>"
+            title = f'Metadata: {short_id}'
+            html = f'<ul><li><b>Especie:</b> {species}</li><li><b>Origen:</b> {origin}</li><li><b>Fecha:</b> {date}</li><li><b>Tamaño:</b> {length} bp</li><li><b>Molécula:</b> {mol}</li><li><b>Estatus:</b> {comp}</li></ul>'
             
             f_itol.write(f'{short_id}\\t{title}\\t{html}\\n')
 "
