@@ -29,6 +29,7 @@ with open('${id_map}', 'r') as f_map:
             id_dict[parts[0]] = parts[1]
 
 with open('${metadata}', 'r') as f_meta, open('itol_metadata.txt', 'w') as f_itol:
+    f_itol.write('METADATA\\n')
     f_itol.write('SEPARATOR TAB\\n')
     f_itol.write('FIELD_LABELS\\tspecies\\torigin\\tdate\\tlength_bp\\tmolecule_type\\tcompleteness\\n')
     f_itol.write('DATA\\n')
