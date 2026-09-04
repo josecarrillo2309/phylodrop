@@ -10,6 +10,6 @@ process IQTREE2 {
 
     script:
     """
-    iqtree2 -s ${alignment} -m MFP -bb 1000 -nt AUTO
+    iqtree -s ${alignment} -m MFP -bb 1000 -nt AUTO
     """
 }
