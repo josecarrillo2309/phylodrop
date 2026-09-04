@@ -9,7 +9,7 @@ workflow ALIGN {
     main:
     ch_mafft_params = Channel.of(
         [id: 'mafft_auto', args: '--auto'],
-        [id: 'mafft_linsi', args: '--linsi']
+        [id: 'mafft_linsi', args: '--localpair --maxiterate 1000']
     )
     ch_mafft_in = ch_mafft_params.combine(clean_fasta)
     MAFFT(ch_mafft_in)
