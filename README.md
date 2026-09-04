@@ -17,14 +17,14 @@ You don't need to install any heavy bioinformatics software. Phylodrop uses **Do
 
 Ensure you have installed:
 - [Nextflow](https://www.nextflow.io/) (>= 22.04.0)
-- [Docker](https://docs.docker.com/engine/install/) or [Singularity](https://sylabs.io/guides/3.0/user-guide/installation.html)
+- **Conda** (Miniconda/Anaconda) OR Docker/Singularity
 
 ## 🏃 Usage
 
 Run the pipeline by pointing it to your raw FASTA and GenBank metadata files.
 
 ```bash
-nextflow run josecarrillo2309/phylodrop -profile docker
+nextflow run josecarrillo2309/phylodrop -profile conda
 ```
 
 By default, Phylodrop uses **Maximum Likelihood (IQ-TREE2)**. To use **Bayesian Inference (MrBayes)**, pass the parameter:
