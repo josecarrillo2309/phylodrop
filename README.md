@@ -37,7 +37,7 @@ By default, Phylodrop uses **Maximum Likelihood (IQ-TREE2)**. To use **Bayesian 
 
 All outputs are neatly categorized inside a `results/` folder (which is ignored by Git to avoid uploading heavy data):
 - `results/00_metadata/`: Formatted `metadata.tsv`.
-- `results/01_format/`: Sanitized FASTA files and `id_map.tsv`.
+- `results/01_format/`: FASTA files and `id_map.tsv`.
 - `results/04_trees/`: Raw phylogenetic trees (`.treefile` or `.con.tre`).
 - `results/05_annotated_trees/`: Drag-and-drop `itol_dataset.txt` files for instant mapping in iTOL.
 
